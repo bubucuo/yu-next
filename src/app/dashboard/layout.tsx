@@ -1,4 +1,5 @@
 "use client";
+import React from "react";
 import { usePathname } from "next/navigation";
 
 export default function DashboardLayout({
@@ -6,15 +7,14 @@ export default function DashboardLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const pathname = usePathname();
-  console.log(
-    "%c [ DashboardLayout pathname ]-10",
-    "font-size:13px; background:pink; color:#bf2c9f;",
-    pathname
-  );
+  // const pathname = usePathname();
+  const [count, setCount] = React.useState(0);
   return (
-    <section className="border-2 border-red-500 m-4 p-4">
-      <h1>DashboardLayout</h1>
+    <section className="box">
+      <h1 className="title2">DashboardLayout</h1>
+      <button onClick={() => setCount(count + 1)} className="btn">
+        DashboardLayout:{count}
+      </button>
       {/* Include shared UI here e.g. a header or sidebar */}
       <nav></nav>
       {children}
