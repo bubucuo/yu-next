@@ -1,14 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
+  src: "../fonts/GeistVF.woff",
   variable: "--font-geist-sans",
   weight: "100 900",
 });
 const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
+  src: "../fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
   weight: "100 900",
 });
@@ -28,7 +29,15 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <main className="border border-black m-2 p-2">
+          <h1>RootLayout</h1>
+          <nav className="flex space-x-4 bg-gray-100 p-4 rounded-md shadow-md">
+            <Link href="/">home</Link>
+            <Link href="/dashboard">dashboard</Link>
+            <Link href="/about">about</Link>
+          </nav>
+          {children}
+        </main>
       </body>
     </html>
   );
