@@ -41,8 +41,15 @@ export default function RootLayout({
             <NavLink href="/suspense">suspense</NavLink>
             <NavLink href="/product/789">product</NavLink>
             <NavLink href="/blog">blog</NavLink>
+            <NavLink href="/list">list</NavLink>
+            <NavLink href="/list/detail">detail</NavLink>
           </nav>
-          {children}
+          <article
+            className="p-4 bg-gray-100 rounded-md shadow-md"
+            style={{ minHeight: "calc(100vh - 4rem)" }}
+          >
+            {children}
+          </article>
         </main>
       </body>
     </html>
