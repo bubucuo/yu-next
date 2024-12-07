@@ -1,4 +1,5 @@
 import { redirect } from "next/navigation";
+import { PageProps } from "../../../../.next/types/app/about/page";
 
 async function fetchTeam(id: string) {
   try {
@@ -14,7 +15,9 @@ async function fetchTeam(id: string) {
   }
 }
 
-export default async function Profile({ params }: { params: { id: string } }) {
+export default async function Profile({
+  params,
+}: PageProps & { params: { id: string } }) {
   const { id } = await params;
 
   const team = await fetchTeam(id);

@@ -43,6 +43,8 @@ export default function RootLayout({
             <NavLink href="/blog">blog</NavLink>
             <NavLink href="/list">list</NavLink>
             <NavLink href="/list/detail">detail</NavLink>
+            <NavLink href="/ssr/without-server">without-ssr</NavLink>
+            <NavLink href="/ssr/with-server">with-ssr</NavLink>
           </nav>
           <article
             className="p-4 bg-gray-100 rounded-md shadow-md"

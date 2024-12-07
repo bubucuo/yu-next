@@ -1,4 +1,4 @@
-export default function Detail(props) {
+export default function Detail() {
   return (
     <div>
       <h3>Detail</h3>
