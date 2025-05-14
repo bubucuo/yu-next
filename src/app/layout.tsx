@@ -31,7 +31,7 @@ export default function RootLayout({
       >
         <main className="box">
           <h1 className="title2">RootLayout</h1>
-          <nav className="flex space-x-4 bg-gray-100 p-4 rounded-md shadow-md">
+          <nav className="flex flex-wrap space-x-4 bg-gray-100 p-4 rounded-md shadow-md">
             <NavLink href="/">home</NavLink>
             <NavLink href="/dashboard">dashboard</NavLink>
             <NavLink href="/dashboard/setting">dashboard setting</NavLink>
@@ -43,6 +43,7 @@ export default function RootLayout({
             <NavLink href="/blog">blog</NavLink>
             <NavLink href="/list">list</NavLink>
             <NavLink href="/list/detail">detail</NavLink>
+            <NavLink href="/ssr">ssr</NavLink>
             <NavLink href="/ssr/without-server">without-ssr</NavLink>
             <NavLink href="/ssr/with-server">with-ssr</NavLink>
           </nav>

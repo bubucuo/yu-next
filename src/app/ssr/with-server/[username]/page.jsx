@@ -1,3 +1,5 @@
+import { fetchUser2 } from "../../../../utils/index";
+
 export default async function DynamicUserName(props) {
   const { username } = await props.params;
 
